@@ -1,9 +1,12 @@
-import { createApp } from "vue";
-import { createPinia } from "pinia";
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 
-import App from "./App.vue";
-import router from "./router";
+loadFonts()
 
-import "./assets/main.scss";
-
-export const app = createApp(App).use(createPinia()).use(router).mount("#app");
+createApp(App)
+  .use(router)
+  .use(vuetify)
+  .mount('#app')
