@@ -6,7 +6,7 @@ import HelloWorld from "../components/HelloWorld.vue";
 <template>
   <main>
     <a-space>
-      <HelloWorld msg="Welcome to vue project setup" />
+      <HelloWorld msg="Welcome to vue project setup 🔺" />
       <TheWelcome />
     </a-space>
   </main>
