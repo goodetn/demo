@@ -1,18 +1,13 @@
-<template>
-  <hello-world />
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-// Components
-import HelloWorld from '../components/HelloWorld.vue';
-
-export default defineComponent({
-  name: 'HomeView',
-
-  components: {
-    HelloWorld,
-  },
-});
+<script setup lang="ts">
+import TheWelcome from "../components/TheWelcome.vue";
+import HelloWorld from "../components/HelloWorld.vue";
 </script>
+
+<template>
+  <main>
+    <a-space>
+      <HelloWorld msg="Welcome to vue project setup" />
+      <TheWelcome />
+    </a-space>
+  </main>
+</template>

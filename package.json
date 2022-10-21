@@ -2,33 +2,27 @@
   "name": "vue-project",
   "version": "0.0.0",
   "scripts": {
-    "serve": "vite preview",
-    "build": "vite build",
+    "dev": "vite",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "build-only": "vite build",
-    "dev": "vite",
-    "preview": "vite preview --port 4173",
     "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@mdi/font": "5.9.55",
     "ant-design-vue": "^3.2.13",
     "pinia": "^2.0.21",
-    "roboto-fontface": "*",
     "unplugin-vue-components": "^0.22.8",
     "vue": "^3.2.41",
-    "vue-router": "^4.1.5",
-    "vuetify": "npm:@vuetify/nightly@next",
-    "webfontloader": "^1.0.0"
+    "vue-router": "^4.1.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/jsdom": "^20.0.0",
     "@types/node": "^16.11.56",
-    "@types/webfontloader": "^1.0.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
@@ -46,9 +40,7 @@
     "start-server-and-test": "^1.14.0",
     "typescript": "~4.7.4",
     "vite": "^3.0.9",
-    "vite-plugin-vuetify": "^1.0.0-alpha.12",
     "vitest": "^0.23.0",
-    "vue-cli-plugin-vuetify": "~2.5.8",
     "vue-tsc": "^0.40.7"
   }
 }
